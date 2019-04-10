@@ -532,7 +532,7 @@
                       .useHtml(true)
                       .padding([10, 0, 10, 0])
                       .text('VISTO DE TURISMO PARA BRASILEIROS <br/>' +
-                              '<span  style="color:#929292; font-size: 12px;">(Data source: Itamaraty, 2019)</span>');
+                              '<span  style="color:#929292; font-size: 12px;">(Fonte: Itamaraty, 2019)</span>');
       
               map.geoData('anychart.maps.world');
               map.interactivity().selectionMode('none');
@@ -547,8 +547,8 @@
               series.labels(false);
       
               series.hovered()
-                      .fill('#f48fb1')
-                      .stroke(anychart.color.darken('#f48fb1'));
+                      .fill('#EC6E07')
+                      .stroke(anychart.color.darken('#EC6E07'));
       
               series.selected()
                       .fill('#c2185b')
@@ -568,8 +568,8 @@
                   {greater: 1.9}
 
               ]);
-
-              scale.colors(['#EC6E07', '#c2185b']);
+              
+              scale.colors(['#f48fb1', '#c2185b']);
 
               var colorRange = map.colorRange();
               colorRange.enabled(true)
@@ -577,7 +577,7 @@
 
               colorRange.ticks()
                       .enabled(true)
-                      .stroke('3 #ffffff')
+                      .stroke('10 #ffffff')
                       .position('center')
                       .length(7);
 
@@ -594,7 +594,7 @@
 
 
                           if (isFinite(range.start + range.end)) {
-                              name = "teste";
+                              name = "-";
                           } else if (isFinite(range.start)) {
                               name = 'Visto exigido';
                           } else {
